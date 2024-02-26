@@ -24,4 +24,14 @@ class Link {
     this.Target = target;
     this.Append = append;
   }
+
+  generer = function () {
+    if (id_zone != "") {
+      let code_generer = document.createAttribute("a");
+
+      throw new Error(
+        "Pour générer un Link, il faut préciser la proprieté id_zone"
+      );
+    }
+  };
 }
