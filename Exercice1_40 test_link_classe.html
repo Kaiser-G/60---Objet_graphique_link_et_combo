@@ -12,8 +12,28 @@
 
     <div id="zone"></div>
 
-    <script></script>
+
     <script src="Exercice1_40 link_ES6.js"></script>
+
+    <script>
+        window.addEventListener("load", (event) => {
+            //génération d'un LINK vers AFPA
+            let l = new Link();
+            l.id_zone = "zone";
+            l.id_link = "idAfpa";
+            l.class_link = "classAfpa";
+            l.url = "http://www.afpa.fr";
+            l.texte_visible = "Lien vers AFPA";
+            l.append = false;
+            l.target = "_blank";
+            try {
+                l.generer();
+            } catch (err) {
+                alert(err.message)
+            }
+
+        }, false);
+    </script>
 </body>
 
 </html>
