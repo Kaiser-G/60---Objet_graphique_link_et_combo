@@ -3,6 +3,7 @@ class Combo {
   id_select = "";
   class_select = "";
   data = "";
+  fonction_change = "";
 
   //methode generer
   generer() {
@@ -23,6 +24,11 @@ class Combo {
           option.value = value[0];
           code_generer.appendChild(option);
         });
+      }
+
+      //Interception de l'évènement CHANGE (si une fonction est prévue par l'utilisateur)
+      if (typeof this.fonction_change == "function") {
+        code_generer.addEventListener("change", this.fonction_change, false);
       }
 
       document.getElementById(this.id_zone).appendChild(code_generer);

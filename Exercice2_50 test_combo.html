@@ -26,16 +26,19 @@
 
         window.addEventListener("load", (event) => {
             let donnees = [
-                ["1", "Lyon"],
-                ["2", "Marseille"],
-                ["3", "Bretagne"],
-                ["4", "Lille"]
+                [1, "Lyon"],
+                [2, "Marseille"],
+                [3, "Bretagne"],
+                [4, "Lille"],
+                [5, "POLOGNE"]
             ];
             let c = new Combo();
             c.id_zone = "zone";
             c.id_select = "idRegion";
             c.class_select = "class_Region";
             c.data = donnees;
+            //fonction_change ne fonctionne pas
+            // c.fonction_change = cbRegionChange;
 
             c.generer();
 
