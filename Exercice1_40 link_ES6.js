@@ -35,9 +35,9 @@ class Link {
 
   generer() {
     if (this.id_zone != "") {
-      let code_generer = document.createAttribute("a");
+      let code_generer = document.createElement("a");
       if (this.id_link != "") {
-        code_generer.id = this.Id_link;
+        code_generer.id = this.id_link;
       }
       if (this.class_link != "") {
         code_generer.className = this.class_link;

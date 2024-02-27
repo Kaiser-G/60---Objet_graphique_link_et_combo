@@ -29,7 +29,22 @@
             try {
                 l.generer();
             } catch (err) {
-                alert(err.message)
+                alert(err.message);
+            }
+            document.getElementById("zone").appendChild(document.createElement("br"));
+
+            let l2 = new Link();
+            l2.id_zone = "zone";
+            l2.id_link = "idjournal";
+            l2.class_link = "classJournal";
+            l2.url = "https://www.journaldugeek.com/";
+            l2.texte_visible = "Journal du geek";
+            l2.append = true;
+            l2.target = "_blank"
+            try {
+                l2.generer();
+            } catch (err) {
+                alert(err.message);
             }
 
         }, false);
