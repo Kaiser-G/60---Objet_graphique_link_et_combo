@@ -22,7 +22,25 @@
     <div id="zone"></div>
 
     <script src="Exercice2_50 Combo_ES6.js"></script>
-    <script></script>
+    <script>
+
+        window.addEventListener("load", (event) => {
+            let donnees = [
+                ["1", "Lyon"],
+                ["2", "Marseille"],
+                ["3", "Bretagne"],
+                ["4", "Lille"]
+            ];
+            let c = new Combo();
+            c.id_zone = "zone";
+            c.id_select = "idRegion";
+            c.class_select = "class_Region";
+            c.data = donnees;
+
+            c.generer();
+
+        }, false);
+    </script>
 </body>
 
 </html>
